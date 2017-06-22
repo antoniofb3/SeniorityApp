@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_factors"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.antoniofb.senioritycalculator.factors.FactorsActivity">
+
+    <TextView
+        android:id="@+id/tvEmployeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvEmployeeJob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmployeeName"/>
+
+    <TextView
+        android:id="@+id/tvEmployeeSeniority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmployeeJob"/>
+
+    <fragment
+        android:id="@+id/fragment_education"
+        android:name="com.antoniofb.senioritycalculator.factors.FactorsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmployeeSeniority"
+        tools:layout="@layout/fragment_factors_list"/>
+
+</RelativeLayout>
